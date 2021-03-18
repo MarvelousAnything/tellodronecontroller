@@ -11,15 +11,15 @@ import java.nio.charset.StandardCharsets;
 
 public interface Command {
 
-    public DroneSocket getSocket();
+    DroneSocket getSocket();
 
-    default Command sendCommand(String command) throws IOException {
+    default DroneCommand sendCommand(String command) throws IOException {
         this.getSocket().send(
                 PacketBuilder.builder()
                         .type(PortType.COMMAND)
                         .msg(command.getBytes(StandardCharsets.UTF_8))
                         .build());
-        return this;
+        return (DroneCommand) this;
     }
 
 }

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
-public class DroneCommand implements ControlCommand, SetCommand, Command {
+public class DroneCommand implements ControlCommand, SetCommand, ReadCommand {
 
     private final DroneSocket commandSocket;
 

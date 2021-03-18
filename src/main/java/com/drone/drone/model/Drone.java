@@ -13,6 +13,6 @@ public class Drone extends DroneCommand {
 
     public Drone(DroneSocket commandSocket) throws IOException {
         super(commandSocket);
-        this.command().up(100).up(100);
+        this.command();
     }
 }

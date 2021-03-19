@@ -10,8 +10,15 @@ public class DroneCommand implements ControlCommand, SetCommand, ReadCommand {
 
     private final DroneSocket commandSocket;
 
+    private final DroneSocket stateSocket;
+
     @Override
-    public DroneSocket getSocket() {
+    public DroneSocket getCommandSocket() {
         return commandSocket;
+    }
+
+    @Override
+    public DroneSocket getStateSocket() {
+        return stateSocket;
     }
 }

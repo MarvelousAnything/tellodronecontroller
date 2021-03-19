@@ -7,5 +7,10 @@ public interface DroneSocket {
 
     void send(DatagramPacket packet) throws IOException;
 
+    void receive(DatagramPacket packet) throws IOException;
+
+    void receive() throws IOException;
+
+    DatagramPacket getRecvPacket();
 }
 

@@ -9,10 +9,7 @@ import lombok.AllArgsConstructor;
 import java.io.IOException;
 
 public class Drone extends DroneCommand {
-
-
-    public Drone(DroneSocket commandSocket) throws IOException {
-        super(commandSocket);
-        this.command();
+    public Drone(DroneSocket commandSocket, DroneSocket stateSocket) {
+        super(commandSocket, stateSocket);
     }
 }

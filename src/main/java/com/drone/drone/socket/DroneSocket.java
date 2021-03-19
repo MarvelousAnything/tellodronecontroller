@@ -12,5 +12,7 @@ public interface DroneSocket {
     void receive() throws IOException;
 
     DatagramPacket getRecvPacket();
+
+    void disconnect();
 }
 

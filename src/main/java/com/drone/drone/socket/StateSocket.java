@@ -43,6 +43,11 @@ public class StateSocket extends DatagramSocket implements DroneSocket {
         this.receive(recvPacket);
     }
 
+    @Override
+    public void disconnect() {
+        this.close();
+    }
+
     @PreDestroy
     public void preDestroy() {
         this.disconnect();

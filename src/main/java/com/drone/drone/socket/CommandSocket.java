@@ -45,6 +45,11 @@ public class CommandSocket extends DatagramSocket implements DroneSocket {
         this.receive(recvPacket);
     }
 
+    @Override
+    public void disconnect() {
+        this.close();
+    }
+
     @PreDestroy
     public void preDestroy() {
         log.info("Destroying command socket bean.");
